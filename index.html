@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Animal Trivia Quiz</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet" type="text/css" 
+    />
+  </head>
+  <body>
+    <header>
+      <h1> Animal Trivia Quiz</h1>
+    </header>
+
+    <aside class="scoreSection">
+      <ul class="quizStatus">
+        <li class="scoreCounter"></li>
+        <li class="questionNumber"></li>
+      </ul>
+    </aside>
+
+    <main role="main">
+
+      <article class="initialPage">
+        <h2>Test Your Knowledge On Animal Trivia!</h2>
+        <button type="button" id="startButton">Start the Quiz</button>
+      </article>
+
+      <form class="hidden quizForm">
+        <h2 class="questionText"></h2>
+        
+          <label>
+            <input class="firstOption" type="radio" name="quizOption" value="0" required/>
+            <span class="quizAnswer"></span>
+          </label>
+
+          <label>
+            <input type="radio" name="quizOption" value="1" required/>
+            <span class="quizAnswer"></span>
+          </label>
+
+          <label>
+            <input type="radio" name="quizOption" value="2" required/>
+            <span class="quizAnswer"></span>
+          </label>
+
+          <label>
+            <input type="radio" name="quizOption" value="3" required/>
+            <span class="quizAnswer"></span>
+          </label>
+
+        <div class="buttonContainer">  
+          <button id="quizSubmit">Submit</button>
+        </div>
+      </form>
+
+      <form class="hidden answerForm">
+        <p class="answerFormText"></p>
+        <div class="buttonContainer">
+          <button id="nextQuestionButton">Next Question</button>
+        </div>
+      </form>
+
+      <form class="hidden endResults">
+        <p class="endResultText">
+          You have reached the end of the quiz. Would you like to try again?
+        </p>
+        <div class="buttonContainer">
+          <button id="restartQuizButton">Restart Quiz</button>
+        </div>
+      </form>
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
